@@ -1,0 +1,155 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=11in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.7in,top=0.8in]{geometry}
+    \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \hspace*{-0.5cm} \\
+}
+
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {John Doe}}\\
+	1234567810 $\cdot$ \href{mailto:JohnDoe@gmail.com}{JohnDoe@gmail.com} $\cdot$ \href{https://www.google.com}{LinkedIn} $\cdot$ \href{https://www.google.com}{Portfolio} $\cdot$ \href{https://www.google.com}{GitHub}\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of Toronto} \hfill Toronto, ON \\
+Bachelor of Applied Science in Computer Engineering \hfill Sep 2022 - May 2026 (Expected)\\
+\vspace{2mm}
+
+\header{Skills}
+\noindent
+\begin{tabular}{@{} p{4cm} p{14cm} @{}}
+    Programming Languages: & \textbf{C/C++}, \textbf{Java}, Python, CSS/HTML, JavaScript, Kotlin, SQL            \\
+    Frameworks: & Spring Boot, Flask, Node.js, BootStrap, Qt\\
+    Technical Tools: & Linux, Git, Bash, Azure, GCP, AWS, MySQL, MongoDB, Kubernetes, Docker, GitLab       \\
+ Relevant Coursework: &Course 1, Course 2, Course 3\\
+\end{tabular}
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+\textbf{Company 1} \hfill Toronto, ON\\
+\textit{Position 1} \hfill Sep 2024 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developing an internal software tool using Java \textbf{Spring Boot} for research data collection and analysis,
+integrating AI models for enhanced insights.
+\end{itemize}
+\textbf{Company 2} \hfill Toronto, ON\\
+\textit{Position 2} \hfill May 2024 - August 2024\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developed a web application using Java \textbf{Spring Boot} framework to automatically collect and analyze competitors\textquotesingle{} data online, utilizing \textbf{MySQL} for data storage and following the \textbf{MVC} Design Pattern.
+        \item Built an open-source Java 
+ library for \textbf{News API} to streamline the data collection process.
+	\item Leveraged \textbf{Gemini AI} API to summarize parsed texts with \textbf{multithreading}, reducing both report size and processing time by \textbf{50\%}, using iText and \textbf{AWS Polly} to generate PDF reports with audio.
+	\item \textbf{Dockerized} the application for testing with \textbf{JUnit}, automated the process with \textbf{Python scripts}, and designed \textbf{REST APIs} to provide external access to the application's core microservices. 
+\end{itemize}
+\textbf{Company 3} \hfill Toronto, ON\\
+\textit{Position 3} \hfill May 2023 - August 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Created a website using Python \textbf{Flask} and \textbf{MongoDB} to record all the microchips in the lab and
+hosted it on Microsoft \textbf{Azure} after containerizing it using \textbf{Docker} for testing.
+        \item Improved the Bluetooth data transfer rate between computers and Arduino microcontrollers from \textbf{1.25} KB/s to \textbf{8} KB/s, a \textbf{640\%} increase through optimizations of embedded C++ algorithms.
+	\item Co-authored a paper on CNN \textbf{Deep Learning} and prosthetic hands for IEEE BioCAS 2023 conference.
+\end{itemize}
+\vspace*{2mm}
+\header{Selected Projects}
+{\textbf{Project 1}} {[\href{https://www.google.com}{GitLab}]} {\sl \textbf{-} Mobile App Development }\hfill July 2024\\
+\vspace{-1mm}
+\begin{itemize}
+    \item  Developed an Android AI Chat App in Kotlin with \textbf{GitLab CI/CD} pipeline and \textbf{GCP Kubernetes}.
+    \item Integrated \textbf{IBM Cloud} services so users can chat with AI models available on IBM \textbf{Watsonx} platform.
+\end{itemize}
+\vspace{2mm}
+{\textbf{Project 2}} {[\href{https://www.google.com}{GitHub}]} {\sl \textbf{-} Full-Stack Software Development}\hfill January 2024 - April 2024\\
+\vspace{-1mm}
+\begin{itemize}
+    \item Led a team of 3 to develop a mapping application in C++ on \textbf{Linux} using \textbf{GTK} for user interface design, \textbf{OSM API} for geographic data, \textbf{SQLite} for data storage, and \textbf{Git} for collaboration.
+    \item Leveraged \textbf{Agile methodologies} for effective communication and project management.
+    \item Designed an efficient solution for a variant of the Travelling Salesman Problem using \textbf{Dijkstra's algorithm} with \textbf{parallel computing}, which ranked \textbf{\#9} among 91 team submissions.
+\end{itemize}
+\vspace*{2mm}
+{\textbf{Project 3}} {[\href{https://www.google.com}{GitHub}]} {\sl \textbf{-} Object-oriented Software Design}\hfill May 2023\\
+\vspace{-1mm}
+\begin{itemize}
+    \item Based on my APS105(Computer Fundamentals) project reversi.c which ranked \textbf{\#6} among 430 students after run-time optimization (decision made within \textbf{1} sec).
+    \item Re-programmed in C++ with a GUI made in \textbf{Qt} that supports both human-human and human-AI matches using \textbf{Minimax}, \textbf{AB-pruning}, and \textbf{Heuristic Evaluation} with a depth up to 6.
+\end{itemize}
+\vspace*{2mm}
+
+\header{Awards and Honors}
+\textbf{1. Award 1:} {First Place}\\
+\vspace*{2mm}
+\textbf{2. Award 2:} {7000 CAD}\\
+\vspace*{2mm}
+\textbf{3. Award 3:} {Bronze Award}\
+\end{document}
